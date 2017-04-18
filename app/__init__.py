@@ -9,8 +9,8 @@ from flask_login import LoginManager
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from slugify import slugify
-from whoosh.analysis import StemmingAnalyzer
-import flask_whooshalchemy
+
+
 from itsdangerous import URLSafeTimedSerializer, URLSafeSerializer, Signer, Serializer, BadSignature, SignatureExpired, TimedJSONWebSignatureSerializer
 from flask_httpauth import HTTPBasicAuth
 from flask_jsonpify import jsonify

@@ -1,4 +1,4 @@
-from app import app, db, bcrypt, slugify, flask_whooshalchemy, JWT, jwt_required, current_identity, safe_str_cmp
+from app import app, db, bcrypt, slugify, JWT, jwt_required, current_identity, safe_str_cmp
 from sqlalchemy import Column, Integer, DateTime, func
 from app import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)

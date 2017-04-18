@@ -341,3 +341,56 @@ form{
     font-style: italic;
     color:#000;
 }
+
+/*FOOTER STYLING*/
+footer{
+width:100%;
+min-height: 180px;
+background-color:#333;
+position: relative;
+transition:transform 0.6s ease;
+
+bottom: 0px;
+padding: 40px;
+left: 0px;
+display: block;
+right:0px;
+clear: both;
+font-size: 16px;
+}
+footer span{
+display: block;
+margin:0px auto;
+text-align: center;
+color: #fff;
+line-height:90px;
+
+}
+
+.social-i{
+    line-height: 90px;
+}
+
+.fa {
+
+padding: 1.5em;
+width:30px; /** fix width ***/
+margin: 0.4em 0.7em;
+text-align: center;
+display: inline;
+border-radius: 60%;
+font-size: 1.1111em !important;
+cursor: pointer;
+
+border: 1px solid #A8E0DA;
+
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover{
+text-decoration: none;
+color: #fff;
+}
