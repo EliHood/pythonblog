@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="row">
+		<div class="container">
+			
+			<div id="post" class="col-md-8 col-md-push-2  col-xs-12 ">
+				{% if post %}
+					<h3 class="article-title">{{ post.title }}</h3>
+				<article class="article-body">{{ post.body }}</article>
+			</li>
+			<p>by: {{ post.author.username }}</p>
+		<p>on {{ post.time_created.strftime('%m/%d/%Y at %G:%I%p') }}</p>
+		<span><small><a href ="{{ url_for('edit', slug=post.slug) }}">Edit Post</a></small></span>
+		<span><small><a href="{{ url_for('delete', id = post.id) }}">Delete Post</a></small></span>
+		
+		{% endif %}
+
+	</div>
+</div>
+</div>
+{% endblock %}
+

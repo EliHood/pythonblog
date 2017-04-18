@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="row">
+  <div class="container">
+    <div id="space" class="col-md-8 col-md-push-2  col-xs-12 ">
+      
+      <form name="create" action="{{ url_for('edit', slug=post.slug) }}" method="POST"> 
+        <label><h3> Edit Title </h3></label></br>
+        <input type="text" class="form-control" name="title" value="{{ request.form.get('title', post.title) }}"></br>
+        <label><h3> Edit Body</h3></label></br>
+          <textarea id="body" class="form-control" name="body" value="{{ request.form.get('body', post.body) }}" >{{ request.form.get('title',post.body) }}</textarea>
+       <button id="submit" class="btn btn-default" name="create-submit" type="submit" value="Update Post">Update</button>
+    </form>
+
+      
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<!--<form action="/posts/create_post" method="POST"> -->
+<!--    <label>Title</label></br>-->
+<!--    <input type="text" name="title"></br>-->
+<!--    <label>Body</label></br>-->
+<!--      <textarea class="form-control" id="body" name="body" style="height: 300px;"></textarea>-->
+<!--    <input type="submit" value="Create">-->
+<!--</form>-->
+
+<div class="row">
+  <div class="container">
+    <div id="space" class="col-md-6 col-md-push-2  col-xs-12 ">
+      <div class="container">
+      <form class="col-md-8 "name="create" action="/posts/create_post" method="POST"> 
+        <label><h3>Title </h3></label></br>
+        <input class="form-control" type="text" name="title" required></br>
+        <label><h3>Body</h3></label></br>
+          <textarea class="form-control" id="body" name="body" ></textarea>
+       
+         
+              <button id="submit" type="submit" class="formbtn btn-default">Submit</button>
+       
+
+    </form>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

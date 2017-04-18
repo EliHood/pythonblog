@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+						<div id="fad" class="alert alert-success" role="alert">
+							{{ message }}
+						</div>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+	
+		
+
+
+<div class="hero">
+	<div class="row">
+		<div class="container">
+			<div class="col-md-12">
+				<header id="hd" class="hero-head">
+					<h1>Welcome</h1>
+					<p>Web Developer Based In Orlando</p>
+		
+		
+			
+			  {% if not g.user.is_authenticated %}
+       
+            
+			<div class="owl">
+				<span>
+					<a id="but" href="/register" class="btn btn-outline-inverse btn-lg text-center">Sign Up</a>
+				</span>
+				
+				<span>
+					<a id="but" href="{{ url_for('login') }}" class="btn btn-outline-inverse btn-lg text-center">Log-In</a>
+				</span>
+			</div>
+		</div>
+			</header>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+<section class="one">
+	<div class="row">
+		<div class="container">
+			<h1 class="article-title text-center">Who We Are ?</h1>
+			<div id="up" class="col-xs-12 col-md-4">
+				<i class="glyphicon glyphicon-paperclip text-center"></i>
+				<figure>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+				totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<i class="glyphicon glyphicon-send text-center "></i>
+				<figure>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+				totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </figure>
+				
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<i class="glyphicon glyphicon-tree-conifer text-center "></i>
+				<figure>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+				totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </figure>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+			
+<div class="row">
+	  <div id="my-one" class="col col-md-8">
+		<div class="col-md-12">
+			<h1>Owls are cool</h1>
+			<p>I Develop PHP and Python</p>
+			
+		
+		</div>
+	 </div>
+ 
+	 <div id="my-two" class="col-6 col-md-4">
+	 	<div class="col-md-12">
+	 		<h1>Tigers are cool too</h1>
+			<p>I also design using HTML5, CSS3, and some JQuery</p>
+			
+
+		
+		</div>
+	 
+	 </div>
+	  
+  
+  
+  
+</div>			
+
+
+{% endblock %}

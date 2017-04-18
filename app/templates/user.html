@@ -1,0 +1,28 @@
+<!-- extend base layout -->
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="container">
+        
+        
+          {% for post in posts%}
+                <div id="article-post" class="post">
+
+                    <div class="col-lg-12 col-xs-12 ">
+                    <div class="container">
+                        <h1>User: {{ user.username }}!</h1>
+                        <h1 class="posts-title">  <a href ="{{ url_for('show', slug=post.slug) }}">  {{ post.title }} </a> </h1>
+                        <p class="articles-body">{{ post.body[:310] }}</p>
+                    <p class="">by:{{ post.author.username }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        
+        
+    </div>
+</div>
+
+{% endblock %}
