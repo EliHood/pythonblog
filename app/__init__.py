@@ -9,8 +9,8 @@ from flask_login import LoginManager
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from slugify import slugify
-
-
+import psycopg2
+import flask_whooshalchemy
 from itsdangerous import URLSafeTimedSerializer, URLSafeSerializer, Signer, Serializer, BadSignature, SignatureExpired, TimedJSONWebSignatureSerializer
 from flask_httpauth import HTTPBasicAuth
 from flask_jsonpify import jsonify
@@ -30,7 +30,7 @@ sess.init_app(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'redsfsfsfsfis'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join( tempfile.gettempdir(), 'test1222.db')
 
 
 db = SQLAlchemy(app)
