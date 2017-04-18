@@ -30,7 +30,7 @@ sess.init_app(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'redsfsfsfsfis'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://iliudvtufwsxft:2a29ed42a42bd79714862ec0933cd0d930db33b7f3dd25f4aefc83c4965f3ed6@ec2-174-129-37-15.compute-1.amazonaws.com:5432/dev672r87g0822'
 
 
 db = SQLAlchemy(app)
