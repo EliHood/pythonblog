@@ -10,12 +10,12 @@ class User(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
-    password = db.Column(db.String(20), unique=True)
+    password = db.Column(db.String(10), unique=True)
     # posts = db.relationship('Post', backref='author', lazy='dynamic')
     
     def __init__(self, username, password):
         self.username = username
-        self.password = bcrypt.generate_password_hash(password, 5)
+        self.password = bcrypt.generate_password_hash(password, 9)
        
  
     def is_authenticated(self):
