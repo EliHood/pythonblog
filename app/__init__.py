@@ -25,9 +25,8 @@ sess.init_app(app)
 
 
 
-app.secret_key = 'super secret key'
-app.config['SESSION_TYPE'] = 'filesystem'
 
+app.config['SESSION_TYPE'] = 'memcached'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'redsfsfsfsfis'
 
@@ -44,3 +43,5 @@ manager.add_command('db', MigrateCommand)
 
 
 from app import views , db
+
+app.secret_key = 'super secret key'
