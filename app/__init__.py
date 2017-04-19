@@ -25,7 +25,8 @@ sess.init_app(app)
 
 
 
-
+app.secret_key = 'super secret key'
+app.config['SESSION_TYPE'] = 'filesystem'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'redsfsfsfsfis'
