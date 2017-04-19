@@ -32,6 +32,7 @@ app.config['SECRET_KEY'] = 'redsfsfsfsfis'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join( tempfile.gettempdir(), 'test1222.db')
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
