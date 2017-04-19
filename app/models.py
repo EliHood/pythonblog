@@ -15,7 +15,7 @@ class User(db.Model):
     
     def __init__(self, username, password):
         self.username = username
-        self.password = bcrypt.generate_password_hash(password,1)
+        self.password = bcrypt.generate_password_hash(password, 2)
        
  
     def is_authenticated(self):
