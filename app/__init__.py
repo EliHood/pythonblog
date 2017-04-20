@@ -21,7 +21,7 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 sess = Session()
 
-sess.init_app(app)
+
 
 
 
@@ -29,7 +29,7 @@ sess.init_app(app)
 app.config['SESSION_TYPE'] = 'memcached'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'redsfsfsfsfis'
-
+sess.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join( tempfile.gettempdir(), 'test1222.db')
