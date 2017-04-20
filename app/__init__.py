@@ -29,7 +29,6 @@ sess = Session()
 app.config['SESSION_TYPE'] = 'memcached'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'redsfsfsfsfis'
-sess.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join( tempfile.gettempdir(), 'test1222.db')
@@ -37,6 +36,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+sess.init_app(app)
 
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
